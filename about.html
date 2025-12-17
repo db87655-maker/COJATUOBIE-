@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroPark - O nas</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <nav class="taskbar">
+        <a href="index.html" class="start-btn" style="text-decoration: none; color: black;">Start</a>
+        <div class="nav-links">
+            <a href="index.html">Szukaj</a>
+            <a href="about.html">O nas</a>
+            <a href="offer.html">Oferta</a>
+            <a href="demo.html">Live Demo</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+        <div class="clock" id="clock">00:00</div>
+    </nav>
+
+    <div class="desktop-container">
+
+        <section class="window-wrapper visible">
+            <div class="window retro-window about-window">
+                <div class="title-bar purple-bar">
+                    <div class="buttons"><span class="btn-dot"></span><span class="btn-dot"></span></div>
+                    <span class="window-title">SYSTEM_INFO.TXT</span>
+                </div>
+                <div class="window-content bg-cream">
+                    
+                    <div class="row-layout">
+                        <div class="text-block">
+                            <h2>Misja Systemu</h2>
+                            <p>RetroPark powstał w 1998 roku (duchem), aby rozwiązać problemy współczesnego parkowania za pomocą technologii minionej epoki. Wierzymy, że surowy kod i piksele są lepsze niż nowoczesny chaos.</p>
+                            <br>
+                            <h3>Nasz Stack Technologiczny:</h3>
+                            <ul style="list-style-type: square; margin-left: 20px; font-family: 'VT323', monospace; font-size: 1.2rem;">
+                                <li>HTML 1.0 (Mentalnie)</li>
+                                <li>Czysta energia kofeiny</li>
+                                <li>IoT (Internet of Things) Sensors</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="panel-box" style="flex: 1; background: white;">
+                            <h4>HISTORY.LOG</h4>
+                            <div class="log-content" style="height: 200px; padding: 10px;">
+                                <p>> 2023.12.01: Inicjalizacja projektu.</p>
+                                <p>> 2024.01.15: Wykryto pierwszy samochód.</p>
+                                <p>> 2024.03.20: Błąd krytyczny w module kawy.</p>
+                                <p>> 2024.06.10: Wdrożenie AI (Artificial Intelligence).</p>
+                                <p>> 2024.12.17: System w pełni operacyjny.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="window-wrapper visible">
+            <div class="window retro-window">
+                <div class="title-bar pink-bar">
+                    <div class="buttons"><span class="btn-dot"></span></div>
+                    <span class="window-title">C:\USERS\TEAM\</span>
+                </div>
+                <div class="window-content bg-cream">
+                    <h2>Zespół Deweloperski</h2>
+                    <div class="folder-grid">
+                        <div class="folder-item">
+                            <div class="folder-icon" style="background: #000; color: #fff; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">CEO</div>
+                            <span style="margin-top: 10px; font-weight: bold;">Admin.exe</span>
+                            <span style="font-size: 0.8rem;">Zarządzanie</span>
+                        </div>
+                        <div class="folder-item">
+                            <div class="folder-icon" style="background: var(--purple); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">DEV</div>
+                            <span style="margin-top: 10px; font-weight: bold;">Coder.js</span>
+                            <span style="font-size: 0.8rem;">Backend</span>
+                        </div>
+                        <div class="folder-item">
+                            <div class="folder-icon" style="background: var(--green); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">UX</div>
+                            <span style="margin-top: 10px; font-weight: bold;">Pixel.css</span>
+                            <span style="font-size: 0.8rem;">Design</span>
+                        </div>
+                        <div class="folder-item">
+                            <div class="folder-icon" style="background: var(--pink); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">SUP</div>
+                            <span style="margin-top: 10px; font-weight: bold;">Help.doc</span>
+                            <span style="font-size: 0.8rem;">Wsparcie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
