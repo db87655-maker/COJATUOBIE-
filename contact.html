@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroPark - Kontakt</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <nav class="taskbar">
+        <a href="index.html" class="start-btn" style="text-decoration: none; color: black;">Start</a>
+        <div class="nav-links">
+            <a href="index.html">Szukaj</a>
+            <a href="about.html">O nas</a>
+            <a href="offer.html">Oferta</a>
+            <a href="demo.html">Live Demo</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+        <div class="clock" id="clock">00:00</div>
+    </nav>
+
+    <div class="desktop-container">
+
+        <section class="window-wrapper visible">
+            <div class="window retro-window contact-window" style="min-height: 500px;">
+                <div class="title-bar pink-bar">
+                    <div class="buttons"><span class="btn-dot"></span><span class="btn-dot"></span></div>
+                    <span class="window-title">MAIL_CLIENT_V2.0 - Nowa Wiadomość</span>
+                </div>
+                <div class="window-content row-layout bg-cream">
+                    
+                    <div class="sidebar-retro">
+                        <h3>FOLDERY</h3>
+                        <ul style="margin-top: 20px;">
+                            <li style="font-weight: bold; color: var(--purple);">> Napisz (Nowa)</li>
+                            <li>Odebrane (0)</li>
+                            <li>Wysłane</li>
+                            <li>Kosz</li>
+                            <li>Spam</li>
+                        </ul>
+
+                        <div style="margin-top: 50px; border-top: 2px solid black; padding-top: 20px;">
+                            <h3>DANE ADRESOWE</h3>
+                            <p style="font-size: 0.9rem; margin-top: 10px;">
+                                <strong>RetroPark S.A.</strong><br>
+                                ul. Pikselowa 12/8<br>
+                                00-998 Cyber City
+                            </p>
+                            <p style="margin-top: 10px; font-family: 'VT323', monospace; font-size: 1.2rem;">
+                                TEL: 555-0199
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-area">
+                        <div class="input-group">
+                            <label>Odbiorca:</label>
+                            <input type="text" value="biuro@retropark.pl" disabled style="background: #e0e0e0; cursor: not-allowed;">
+                        </div>
+                        <div class="input-group">
+                            <label>Twój Email:</label>
+                            <input type="email" placeholder="jan@kowalski.pl">
+                        </div>
+                        <div class="input-group">
+                            <label>Temat:</label>
+                            <select style="border: 2px solid black; padding: 8px; font-family: 'Space Grotesk', sans-serif;">
+                                <option>Zapytanie ofertowe</option>
+                                <option>Zgłoszenie błędu</option>
+                                <option>Współpraca</option>
+                                <option>Inne</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Treść wiadomości:</label>
+                            <textarea placeholder="Tutaj wpisz treść..." style="height: 200px;"></textarea>
+                        </div>
+                        
+                        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                            <button class="retro-btn" style="background: white;">ZAPISZ KOPIĘ</button>
+                            <button class="retro-btn" onclick="alert('Wiadomość wysłana do serwera (Symulacja).')">WYŚLIJ WIADOMOŚĆ</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

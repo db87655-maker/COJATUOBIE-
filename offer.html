@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroPark - Oferta</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styl specyficzny dla tabeli cennika */
+        .retro-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Space Grotesk', sans-serif;
+            background: white;
+            border: 2px solid black;
+        }
+        .retro-table th, .retro-table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .retro-table th {
+            background: var(--purple);
+            font-family: 'VT323', monospace;
+            font-size: 1.3rem;
+        }
+        .retro-table tr:nth-child(even) {
+            background: #f0f0f0;
+        }
+        .highlight-cell {
+            background: var(--green) !important;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+   <nav class="taskbar">
+        <a href="index.html" class="start-btn" style="text-decoration: none; color: black;">Start</a>
+        <div class="nav-links">
+            <a href="index.html">Szukaj</a>
+            <a href="about.html">O nas</a>
+            <a href="offer.html">Oferta</a>
+            <a href="demo.html">Live Demo</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+        <div class="clock" id="clock">00:00</div>
+    </nav>
+
+    <div class="desktop-container">
+
+        <section class="window-wrapper visible">
+            <div class="window retro-window offer-window">
+                <div class="title-bar green-bar">
+                    <div class="buttons"><span class="btn-dot"></span></div>
+                    <span class="window-title">SERVICES_LIST.DIR</span>
+                </div>
+                <div class="window-content bg-cream">
+                    <h2>Dostępne moduły</h2>
+                    <p style="margin-bottom: 20px;">Wybierz rozwiązanie dopasowane do Twojej infrastruktury.</p>
+                    
+                    <div class="row-layout">
+                        <div class="stat-box" style="width: 32%; text-align: left;">
+                            <h3 style="background: var(--pink); display: inline-block; padding: 2px 5px;">MIASTA</h3>
+                            <p style="font-size: 0.9rem; margin-top: 10px;">Kompleksowy system monitorowania stref płatnego parkowania. Integracja z parkometrami.</p>
+                        </div>
+                        <div class="stat-box" style="width: 32%; text-align: left;">
+                            <h3 style="background: var(--purple); display: inline-block; padding: 2px 5px;">GALERIE</h3>
+                            <p style="font-size: 0.9rem; margin-top: 10px;">System naprowadzania klientów na wolne miejsca. Tablice LED przy wjeździe.</p>
+                        </div>
+                        <div class="stat-box" style="width: 32%; text-align: left;">
+                            <h3 style="background: #ccc; display: inline-block; padding: 2px 5px;">OSIEDLA</h3>
+                            <p style="font-size: 0.9rem; margin-top: 10px;">Zarządzanie miejscami prywatnymi i dla gości. Aplikacja mobilna dla mieszkańców.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="window-wrapper visible">
+            <div class="window retro-window">
+                <div class="title-bar">
+                    <div class="buttons"><span class="btn-dot"></span><span class="btn-dot"></span></div>
+                    <span class="window-title">PRICING_SHEET.XLS</span>
+                </div>
+                <div class="window-content bg-cream">
+                    <h2>Tabela Opłat (Miesięcznie)</h2>
+                    <div style="overflow-x: auto; margin-top: 20px;">
+                        <table class="retro-table">
+                            <thead>
+                                <tr>
+                                    <th>Funkcja</th>
+                                    <th>Basic</th>
+                                    <th>Pro</th>
+                                    <th>Enterprise</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monitoring miejsc</td>
+                                    <td>Do 50</td>
+                                    <td>Do 500</td>
+                                    <td>Bez limitu</td>
+                                </tr>
+                                <tr>
+                                    <td>Aktualizacja danych</td>
+                                    <td>Co 5 min</td>
+                                    <td>Co 1 min</td>
+                                    <td class="highlight-cell">Real-time</td>
+                                </tr>
+                                <tr>
+                                    <td>Raporty</td>
+                                    <td>PDF</td>
+                                    <td>PDF + Excel</td>
+                                    <td>API Access</td>
+                                </tr>
+                                <tr>
+                                    <td>Wsparcie</td>
+                                    <td>Email</td>
+                                    <td>Email + Tel</td>
+                                    <td>24/7 Dedykowane</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CENA</strong></td>
+                                    <td><strong>99 PLN</strong></td>
+                                    <td><strong>499 PLN</strong></td>
+                                    <td><strong>Kontakt</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 20px; text-align: center;">
+                        <button class="retro-btn" onclick="location.href='contact.html'">ZAMÓW LICENCJĘ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
