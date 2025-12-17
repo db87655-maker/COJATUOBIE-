@@ -1,0 +1,526 @@
+:root {
+    --bg-desktop: #fbf3d5; /* Kremowy beż */
+    --window-bg: #fffce6;
+    --purple: #c3a6e6;
+    --pink: #ffaad4;
+    --green: #b5e48c;
+    --border-color: #000;
+    --shadow: 4px 4px 0px #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-desktop);
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--border-color);
+    padding-bottom: 50px;
+    padding-top: 60px; /* Miejsce na pasek */
+}
+
+/* Typography */
+h1, h2, h3, .window-title, .logo-text {
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+}
+
+/* Taskbar */
+.taskbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: var(--purple);
+    border-bottom: 3px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.start-btn {
+    background: var(--green);
+    border: 2px solid var(--border-color);
+    padding: 5px 15px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #000;
+}
+
+.start-btn:active {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.clock {
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+}
+
+/* Layout */
+.desktop-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Window Component - To robi cały design */
+.window-wrapper {
+    width: 100%;
+    /* Animacje przy scrollowaniu */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.window-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.retro-window {
+    border: 3px solid var(--border-color);
+    background: var(--window-bg);
+    box-shadow: 8px 8px 0px var(--border-color);
+    overflow: hidden;
+}
+
+.title-bar {
+    background: var(--purple);
+    border-bottom: 3px solid var(--border-color);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Kolory pasków tytułowych z grafiki */
+.pink-bar { background: var(--pink); }
+.green-bar { background: var(--green); }
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: white;
+}
+
+.window-title {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.window-content {
+    padding: 20px;
+    min-height: 300px;
+}
+
+.bg-cream {
+    background: #fffce6;
+}
+
+/* Hero Section Specifics */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo-text {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--green);
+    text-shadow: 3px 3px 0px #000;
+    -webkit-text-stroke: 2px black;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    max-width: 500px;
+    background: var(--pink);
+    padding: 10px;
+    border: 3px solid black;
+}
+
+.search-box input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.retro-btn {
+    background: var(--green);
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px black;
+    transition: transform 0.1s;
+}
+
+.retro-btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px black;
+}
+
+.retro-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+}
+
+/* About / Video Section */
+.row-layout {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+
+.video-placeholder {
+    flex: 2;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    min-height: 250px;
+}
+
+.play-icon {
+    font-size: 4rem;
+    color: var(--pink);
+}
+
+.text-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 30px;
+    border: 3px solid black;
+    margin-top: 20px;
+    background: white;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--pink);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+}
+
+/* Offer Folder Grid */
+.folder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.folder-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.folder-item:hover .folder-icon {
+    transform: scale(1.1);
+}
+
+.folder-icon {
+    font-size: 4rem;
+    transition: transform 0.2s;
+}
+
+/* Demo & Stats */
+.demo-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    text-align: center;
+    border: 2px solid black;
+    padding: 20px;
+    background: white;
+    width: 45%;
+    box-shadow: 4px 4px 0px var(--green);
+}
+
+.big-number {
+    font-family: 'VT323', monospace;
+    font-size: 3rem;
+    display: block;
+}
+
+.large-btn {
+    width: 100%;
+    background: var(--purple);
+    font-size: 1.5rem;
+    font-family: 'VT323', monospace;
+}
+
+/* Contact Form */
+.sidebar-retro {
+    flex: 1;
+    border-right: 2px solid black;
+    padding-right: 20px;
+}
+
+.sidebar-retro ul {
+    list-style: none;
+}
+
+.sidebar-retro li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.sidebar-retro li:hover { text-decoration: underline; }
+
+.form-area {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group input, .input-group textarea {
+    border: 2px solid black;
+    padding: 8px;
+    background: white;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .row-layout {
+        flex-direction: column;
+    }
+    .logo-text {
+        font-size: 3rem;
+    }
+    .search-box {
+        flex-direction: column;
+    }
+}
+
+/* --- DODATKI DLA DEMO.HTML (MAPA) --- */
+
+/* Układ okna mapy */
+.map-layout {
+    display: flex;
+    gap: 20px;
+    height: 600px; /* Stała wysokość dla okna mapy */
+}
+
+@media (max-width: 768px) {
+    .map-layout {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+/* Sekcja mapy */
+.map-container {
+    flex: 2;
+    background: #e0e0e0; /* Szary Windowsowy */
+    border: 2px inset white; /* Wklęsła ramka */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-family: 'VT323', monospace;
+    border-bottom: 1px solid #999;
+    padding-bottom: 5px;
+}
+
+/* Legenda */
+.legend {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.dot { width: 10px; height: 10px; border: 1px solid black; }
+.dot.free { background: var(--green); }
+.dot.occupied { background: var(--pink); }
+.dot.user { background: yellow; }
+
+/* Siatka Parkingu */
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 kolumn */
+    gap: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    height: 100%;
+    align-content: start;
+}
+
+/* Pojedyncze miejsce parkingowe */
+.spot {
+    aspect-ratio: 1/1.2; /* Prostokątne miejsca */
+    background: var(--green);
+    border: 2px solid black;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+}
+
+.spot:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.spot.occupied {
+    background: var(--pink); /* Zajęte */
+    cursor: not-allowed;
+    background-image: radial-gradient(black 10%, transparent 10%); /* Wzorek kropkowany */
+    background-size: 10px 10px;
+}
+
+.spot.reserved {
+    background: #fdfd96; /* Żółty - rezerwacja użytkownika */
+    border: 3px dashed black;
+}
+
+.spot-icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* Sidebar i kontrolki */
+.sidebar-controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.panel-box {
+    border: 2px solid black;
+    background: white;
+    padding: 10px;
+    box-shadow: 4px 4px 0px #ccc;
+}
+
+.panel-box h4 {
+    background: var(--purple);
+    color: black;
+    margin: -10px -10px 10px -10px;
+    padding: 5px 10px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+}
+
+/* Statystyki */
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Space Grotesk', monospace;
+    font-weight: bold;
+    border-bottom: 1px dotted #ccc;
+    padding: 5px 0;
+}
+
+/* Konsola "hakerska" */
+.console-box {
+    flex-grow: 1;
+    background: black;
+    color: var(--green);
+    border: 2px solid #555;
+    display: flex;
+    flex-direction: column;
+}
+
+.console-box h4 {
+    background: #333;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.log-content {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    overflow-y: auto;
+    height: 150px;
+    padding-right: 5px;
+}
+
+/* Pasek stanu na dole */
+.status-bar {
+    background: #e0e0e0;
+    border-top: 2px solid white;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    color: #555;
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 10px;
+}

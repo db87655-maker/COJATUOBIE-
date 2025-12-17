@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroPark - Live Map Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <nav class="taskbar">
+        <a href="index.html" class="start-btn" style="text-decoration: none; color: black;">&lt; WRÓĆ</a>
+        <div class="nav-links">
+            <span>SECTOR: A-12</span>
+            <span>STATUS: LIVE</span>
+        </div>
+        <div class="clock" id="clock">00:00</div>
+    </nav>
+
+    <div class="desktop-container">
+
+        <section class="window-wrapper visible" style="transform: none; opacity: 1;">
+            <div class="window retro-window map-window">
+                <div class="title-bar pink-bar">
+                    <div class="buttons"><span class="btn-dot"></span></div>
+                    <span class="window-title">SYSTEM_MONITOR.EXE - LEVEL 1</span>
+                </div>
+                
+                <div class="window-content bg-cream map-layout">
+                    
+                    <div class="map-container">
+                        <div class="map-header">
+                            <h3>PARKING GRID VIEW</h3>
+                            <div class="legend">
+                                <span class="legend-item"><span class="dot free"></span> Wolne</span>
+                                <span class="legend-item"><span class="dot occupied"></span> Zajęte</span>
+                                <span class="legend-item"><span class="dot user"></span> Twoje</span>
+                            </div>
+                        </div>
+                        
+                        <div id="parking-grid" class="parking-grid">
+                            </div>
+                    </div>
+
+                    <div class="sidebar-controls">
+                        
+                        <div class="panel-box">
+                            <h4>STATISTICS</h4>
+                            <div class="stat-row">
+                                <span>TOTAL:</span> <span id="map-total">0</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>FREE:</span> <span id="map-free" style="color: green">0</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>OCCUPIED:</span> <span id="map-occupied" style="color: red">0</span>
+                            </div>
+                        </div>
+
+                        <div class="panel-box console-box">
+                            <h4>SYSTEM LOG</h4>
+                            <div id="system-log" class="log-content">
+                                > Connecting to sensors...<br>
+                                > Signal established.<br>
+                                > Waiting for input...
+                            </div>
+                        </div>
+
+                        <div class="panel-box action-box" id="action-panel" style="display: none;">
+                            <h4 id="selected-spot-id">SPOT: --</h4>
+                            <p>Status: <span id="selected-spot-status">--</span></p>
+                            <button id="reserve-btn" class="retro-btn full-width">REZERWUJ</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="status-bar">
+                    <p>Connection: SECURE (128-bit) | Latency: 24ms</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="demo-map.js"></script>
+</body>
+</html>

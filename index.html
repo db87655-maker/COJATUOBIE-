@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroPark - System Parkingowy</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <nav class="taskbar">
+        <a href="demo.html" class="start-btn" style="text-decoration: none; color: black;">Start</a>
+        
+        <div class="nav-links">
+            <a href="#hero">Szukaj</a>
+            <a href="#about">O nas</a>
+            <a href="#offer">Oferta</a>
+            <a href="demo.html">Live Demo</a>
+            <a href="#contact">Kontakt</a>
+        </div>
+        <div class="clock" id="clock">00:00</div>
+    </nav>
+
+    <div class="desktop-container">
+
+        <section id="hero" class="window-wrapper">
+            <div class="window retro-window hero-window">
+                <div class="title-bar">
+                    <div class="buttons">
+                        <span class="btn-dot"></span><span class="btn-dot"></span>
+                    </div>
+                    <span class="window-title">Browser - Park.Search</span>
+                </div>
+                <div class="window-content center-content bg-cream">
+                    <h1 class="logo-text">PARK<span class="outline-text">TRACKER</span></h1>
+                    <div class="search-box">
+                        <input type="text" placeholder="Wpisz miasto..." id="city-search">
+                        <button class="retro-btn">Szukaj</button>
+                    </div>
+                    <div class="status-ticker">
+                        <p>SYSTEM ONLINE... <span id="total-spots-display">Ładowanie danych...</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="window-wrapper">
+            <div class="window retro-window about-window">
+                <div class="title-bar purple-bar">
+                    <div class="buttons"><span class="btn-dot"></span></div>
+                    <span class="window-title">BEST.SYSTEM.EVER.PLAYER</span>
+                </div>
+                <div class="window-content row-layout bg-cream">
+                    <div class="video-placeholder">
+                        <div class="play-icon">▶</div>
+                        <p>Oglądaj demo technologii</p>
+                    </div>
+                    <div class="text-block">
+                        <h2>Nowa era parkowania</h2>
+                        <p>Wykorzystujemy czujniki IoT oraz sztuczną inteligencję, abyś nigdy więcej nie tracił czasu na szukanie miejsca.</p>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 75%">Instalacja... 75%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="offer" class="window-wrapper">
+            <div class="window retro-window offer-window">
+                <div class="title-bar green-bar">
+                    <div class="buttons"><span class="btn-dot"></span></div>
+                    <span class="window-title">LAN.OFFER/SERVICES</span>
+                </div>
+                <div class="window-content bg-cream">
+                    <h2>Dla kogo jest ten system?</h2>
+                    <div class="folder-grid">
+                        <div class="folder-item">
+                            <div class="folder-icon">📁</div>
+                            <span>Miasta.exe</span>
+                        </div>
+                        <div class="folder-item">
+                            <div class="folder-icon">📁</div>
+                            <span>Galerie.dat</span>
+                        </div>
+                        <div class="folder-item">
+                            <div class="folder-icon">📁</div>
+                            <span>Osiedla.sys</span>
+                        </div>
+                        <div class="folder-item">
+                            <div class="folder-icon">💾</div>
+                            <span>Cennik.doc</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="window-wrapper">
+            <div class="window retro-window demo-window">
+                <div class="title-bar pink-bar">
+                    <div class="buttons"><span class="btn-dot"></span></div>
+                    <span class="window-title">LIVE_DATA_STREAM</span>
+                </div>
+                <div class="window-content bg-cream">
+                    <div class="demo-stats">
+                        <div class="stat-box">
+                            <h3>Wolne miejsca</h3>
+                            <span id="free-spots-count" class="big-number">--</span>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Zajęte miejsca</h3>
+                            <span id="occupied-spots-count" class="big-number">--</span>
+                        </div>
+                    </div>
+                    <button class="retro-btn large-btn" onclick="alert('Przekierowanie do pełnej mapy...')">OTWÓRZ PEŁNĄ MAPĘ</button>
+                    <p class="small-note">*Dane pobierane z LocalStorage</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="window-wrapper">
+            <div class="window retro-window contact-window">
+                <div class="title-bar">
+                    <div class="buttons"><span class="btn-dot"></span></div>
+                    <span class="window-title">MAIL.CLIENT - Napisz do nas</span>
+                </div>
+                <div class="window-content row-layout bg-cream">
+                    <div class="sidebar-retro">
+                        <ul>
+                            <li>Inbox (1)</li>
+                            <li>Sent</li>
+                            <li>Drafts</li>
+                        </ul>
+                    </div>
+                    <div class="form-area">
+                        <div class="input-group">
+                            <label>Do:</label>
+                            <input type="text" value="kontakt@parktracker.pl" disabled>
+                        </div>
+                        <div class="input-group">
+                            <label>Temat:</label>
+                            <input type="text" placeholder="Współpraca">
+                        </div>
+                        <div class="input-group">
+                            <textarea placeholder="Wpisz wiadomość..."></textarea>
+                        </div>
+                        <button class="retro-btn">WYŚLIJ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="demo.js"></script> <script src="main.js"></script>
+</body>
+</html>
