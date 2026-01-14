@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroPark - Aktualności</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .news-excerpt {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--purple);
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 2px solid var(--purple);
+        }
+    </style>
+</head>
+<body>
+    <nav class="taskbar">
+        <a href="index.html" class="start-btn" style="text-decoration: none; color: black;">Start</a>
+        <div class="nav-links">
+            <a href="index.html">Start</a>
+            <a href="news.html">Aktualności</a>
+            <a href="demo.html">Live Demo</a>
+        </div>
+        <div class="clock" id="clock">00:00</div>
+    </nav>
+
+    <div class="desktop-container">
+        <h1 class="logo-text" style="font-size: 2.5rem;">C:\SYSTEM\NEWS</h1>
+
+        <div class="news-grid">
+            <article class="window-wrapper visible">
+                <div class="window retro-window">
+                    <div class="title-bar pink-bar">
+                        <div class="buttons"><span class="btn-dot"></span></div>
+                        <span class="window-title">NEWS_01.TXT</span>
+                    </div>
+                    <div class="window-content bg-cream">
+                        <h3>Nowe czujniki w Krakowie</h3>
+                        <p class="news-excerpt">Zakończyliśmy instalację 500 nowych sensorów IoT na Starym Mieście. Sprawdź jak to działa...</p>
+                        <a href="news-1.html" class="read-more">OTWÓRZ PLIK ></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="window-wrapper visible">
+                <div class="window retro-window">
+                    <div class="title-bar green-bar">
+                        <div class="buttons"><span class="btn-dot"></span></div>
+                        <span class="window-title">UPDATE_V2.LOG</span>
+                    </div>
+                    <div class="window-content bg-cream">
+                        <h3>Algorytm AI 2.0</h3>
+                        <p class="news-excerpt">Nasz system przewidywania wolnych miejsc osiągnął 98% skuteczności. Zobacz wykresy wydajności.</p>
+                        <a href="news-2.html" class="read-more">OTWÓRZ PLIK ></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="window-wrapper visible">
+                <div class="window retro-window">
+                    <div class="title-bar purple-bar">
+                        <div class="buttons"><span class="btn-dot"></span></div>
+                        <span class="window-title">VIDEO_REPORT.AVI</span>
+                    </div>
+                    <div class="window-content bg-cream">
+                        <h3>RetroPark w Warszawie</h3>
+                        <p class="news-excerpt">Obejrzyj krótką relację wideo z wdrożenia naszego systemu w największej galerii handlowej.</p>
+                        <a href="news-3.html" class="read-more">OTWÓRZ PLIK ></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
