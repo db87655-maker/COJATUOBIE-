@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroPark - Galeria Zdjęć</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <nav class="taskbar">
+        <a href="index.html" class="start-btn" style="text-decoration: none; color: black;">Start</a>
+        
+       <div class="nav-links">
+            <a href="index.html">Start</a>
+            <a href="about.html">O nas</a>
+            <a href="offer.html">Oferta</a>
+            <a href="gallery.html">Galeria</a>
+            <a href="news.html">News</a> 
+            <a href="demo.html">Live Demo</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+        <div class="clock" id="clock">00:00</div>
+    </nav>
+
+    <div class="desktop-container">
+        <section id="gallery" class="window-wrapper visible">
+            <div class="window retro-window gallery-window">
+                <div class="title-bar blue-bar">
+                    <div class="buttons">
+                        <span class="btn-dot"></span><span class="btn-dot"></span>
+                    </div>
+                    <span class="window-title">C:\PHOTOS\PARKING_VIEWER.EXE</span>
+                </div>
+                <div class="window-content bg-cream">
+                    <h2>Podgląd monitoringu i infrastruktury</h2>
+                    <p>Kliknij na zdjęcie, aby powiększyć (Symulacja)</p>
+                    
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="img-placeholder">
+                                <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=400&q=80" alt="Parking 1">
+                            </div>
+                            <span class="img-caption">wjazd_glowny.jpg</span>
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="img-placeholder">
+                                <img src="https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?auto=format&fit=crop&w=400&q=80" alt="Parking 2">
+                            </div>
+                            <span class="img-caption">sektor_A1.jpg</span>
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="img-placeholder">
+                                <img src="https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?auto=format&fit=crop&w=400&q=80" alt="Parking 3">
+                            </div>
+                            <span class="img-caption">czujniki_iot.jpg</span>
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="img-placeholder">
+                                <img src="https://images.unsplash.com/photo-1545179605-1296651e9d43?auto=format&fit=crop&w=400&q=80" alt="Parking 4">
+                            </div>
+                            <span class="img-caption">nocna_zmiana.png</span>
+                        </div>
+                    </div>
+
+                    <div class="status-bar full-width" style="margin-top: 20px;">
+                        Gotowy. Wyświetlono 4 obiekty. Rozmiar: 1.4 MB
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
